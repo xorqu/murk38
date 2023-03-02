@@ -28,14 +28,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.4, -0.7)
 [node name="Pistol" parent="Camera3D/Weapon_marker" instance=ExtResource("2_y3ofx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
 
-[node name="Control" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 custom_minimum_size = Vector2(350, 200)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 350.0
 offset_bottom = 200.0
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="Crosshair" type="ColorRect" parent="UI"]
 custom_minimum_size = Vector2(2, 2)
 layout_mode = 1
 anchors_preset = 8
