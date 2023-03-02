@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb7f5angh2m7n"]
+
+[ext_resource type="Script" path="res://weapons/pistol/pistol.gd" id="1_pk1om"]
+[ext_resource type="AudioStream" uid="uid://c30sgshqip07b" path="res://weapons/pistol/shot.mp3" id="2_cjv0u"]
+
+[node name="Pistol" type="Node3D"]
+script = ExtResource("1_pk1om")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(0.1, 0.2, 1)
+
+[node name="Shot_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cjv0u")
+volume_db = -33.69
