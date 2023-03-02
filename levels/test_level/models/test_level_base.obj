@@ -1,4 +1,4 @@
-mtllib test_level.mtl
+mtllib test_level_base.mtl
 # vertices
 v -64 -32 -480
 v -64 -32 96
