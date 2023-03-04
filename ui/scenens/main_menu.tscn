@@ -19,10 +19,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -30.0
-offset_top = -40.0
-offset_right = 30.0
-offset_bottom = 40.0
+offset_left = -100.0
+offset_top = -60.0
+offset_right = 100.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -37,5 +37,36 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "exit"
 
+[node name="Levels_list" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -60.0
+offset_right = 100.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Test_level_button" type="Button" parent="Levels_list"]
+layout_mode = 2
+text = "test_level"
+
+[node name="Soon_button" type="Button" parent="Levels_list"]
+layout_mode = 2
+text = "soon"
+
+[node name="Levels_list_back_button" type="Button" parent="Levels_list"]
+layout_mode = 2
+text = "back"
+
 [connection signal="pressed" from="VBoxContainer/Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Levels_list/Test_level_button" to="." method="_on_test_level_button_pressed"]
+[connection signal="pressed" from="Levels_list/Levels_list_back_button" to="." method="_on_levels_list_back_button_pressed"]
