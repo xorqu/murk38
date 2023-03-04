@@ -12,8 +12,12 @@ script = ExtResource("1_3vgvw")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-size = Vector3(0.6, 3.2, 0.6)
+size = Vector3(0.6, 3, 0.6)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("CapsuleShape3D_7uiua")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+agent_height_offset = 0.5
