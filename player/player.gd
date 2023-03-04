@@ -5,7 +5,7 @@ class_name Player extends CharacterBody3D
 @export_range(10, 400, 1) var acceleration: float = 130 # m/s^2
 
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 2.3 # m
-@export_range(0.1, 9.25, 0.05, "or_greater") var camera_sens: float = 50
+@export_range(0.1, 9.25, 0.05, "or_greater") var camera_sens: float = 80
 
 
 
