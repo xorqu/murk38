@@ -5,7 +5,7 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var mesh_instances = $Geometry.get_child(0).get_children()
+	var mesh_instances = $NavigationRegion3D.get_child(0).get_children()
 	print(mesh_instances)
 	for mesh_instance in mesh_instances:
 		for index in mesh_instance.mesh.get_surface_count():
