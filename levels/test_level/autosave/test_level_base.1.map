@@ -96,12 +96,12 @@
 }
 // brush 10
 {
-( -320 512 32 ) ( -320 513 32 ) ( -320 512 33 ) test_level/test_texture 32 0 0 1 1
-( -256 480 0 ) ( -257 480 0 ) ( -256 480 1 ) test_level/test_texture 0 0 180 1 -1
-( -256 448 0 ) ( -256 449 0 ) ( -257 448 0 ) test_level/test_texture 32 0 90 1 1
-( -320 512 320 ) ( -321 512 320 ) ( -320 513 320 ) test_level/test_texture 32 0 90 1 1
-( -320 544 32 ) ( -320 544 33 ) ( -321 544 32 ) test_level/test_texture 0 0 180 1 -1
-( -256 448 0 ) ( -256 448 1 ) ( -256 449 0 ) test_level/test_texture 32 0 0 1 1
+( -320 576 32 ) ( -320 577 32 ) ( -320 576 33 ) test_level/test_texture 32 0 0 1 1
+( -256 544 0 ) ( -257 544 0 ) ( -256 544 1 ) test_level/test_texture 0 0 180 1 -1
+( -256 512 0 ) ( -256 513 0 ) ( -257 512 0 ) test_level/test_texture 32 0 90 1 1
+( -320 576 320 ) ( -321 576 320 ) ( -320 577 320 ) test_level/test_texture 32 0 90 1 1
+( -320 608 32 ) ( -320 608 33 ) ( -321 608 32 ) test_level/test_texture 0 0 180 1 -1
+( -256 512 0 ) ( -256 512 1 ) ( -256 513 0 ) test_level/test_texture 32 0 0 1 1
 }
 // brush 11
 {
@@ -114,12 +114,12 @@
 }
 // brush 12
 {
-( -512 512 32 ) ( -512 513 32 ) ( -512 512 33 ) test_level/test_texture 32 0 0 1 1
-( -448 480 0 ) ( -449 480 0 ) ( -448 480 1 ) test_level/test_texture 0 0 180 1 -1
-( -448 448 0 ) ( -448 449 0 ) ( -449 448 0 ) test_level/test_texture 32 0 90 1 1
-( -512 512 320 ) ( -513 512 320 ) ( -512 513 320 ) test_level/test_texture 32 0 90 1 1
-( -512 544 32 ) ( -512 544 33 ) ( -513 544 32 ) test_level/test_texture 0 0 180 1 -1
-( -448 448 0 ) ( -448 448 1 ) ( -448 449 0 ) test_level/test_texture 32 0 0 1 1
+( -512 576 32 ) ( -512 577 32 ) ( -512 576 33 ) test_level/test_texture 32 0 0 1 1
+( -448 544 0 ) ( -449 544 0 ) ( -448 544 1 ) test_level/test_texture 0 0 180 1 -1
+( -448 512 0 ) ( -448 513 0 ) ( -449 512 0 ) test_level/test_texture 32 0 90 1 1
+( -512 576 320 ) ( -513 576 320 ) ( -512 577 320 ) test_level/test_texture 32 0 90 1 1
+( -512 608 32 ) ( -512 608 33 ) ( -513 608 32 ) test_level/test_texture 0 0 180 1 -1
+( -448 512 0 ) ( -448 512 1 ) ( -448 513 0 ) test_level/test_texture 32 0 0 1 1
 }
 // brush 13
 {
@@ -276,12 +276,12 @@
 }
 // brush 30
 {
-( -128 512 32 ) ( -128 513 32 ) ( -128 512 33 ) test_level/test_texture 32 0 0 1 1
-( -64 480 0 ) ( -65 480 0 ) ( -64 480 1 ) test_level/test_texture 0 0 180 1 -1
-( -64 448 0 ) ( -64 449 0 ) ( -65 448 0 ) test_level/test_texture 32 0 90 1 1
-( -128 512 320 ) ( -129 512 320 ) ( -128 513 320 ) test_level/test_texture 32 0 90 1 1
-( -128 544 32 ) ( -128 544 33 ) ( -129 544 32 ) test_level/test_texture 0 0 180 1 -1
-( -64 448 0 ) ( -64 448 1 ) ( -64 449 0 ) test_level/test_texture 32 0 0 1 1
+( -128 576 32 ) ( -128 577 32 ) ( -128 576 33 ) test_level/test_texture 32 0 0 1 1
+( -64 544 0 ) ( -65 544 0 ) ( -64 544 1 ) test_level/test_texture 0 0 180 1 -1
+( -64 512 0 ) ( -64 513 0 ) ( -65 512 0 ) test_level/test_texture 32 0 90 1 1
+( -128 576 320 ) ( -129 576 320 ) ( -128 577 320 ) test_level/test_texture 32 0 90 1 1
+( -128 608 32 ) ( -128 608 33 ) ( -129 608 32 ) test_level/test_texture 0 0 180 1 -1
+( -64 512 0 ) ( -64 512 1 ) ( -64 513 0 ) test_level/test_texture 32 0 0 1 1
 }
 // brush 31
 {
@@ -318,23 +318,5 @@
 ( -128 1312 320 ) ( -129 1312 320 ) ( -128 1313 320 ) test_level/test_texture -32 0 90 1 1
 ( -128 1312 32 ) ( -128 1312 33 ) ( -129 1312 32 ) test_level/test_texture 0 0 180 1 -1
 ( -64 1248 0 ) ( -64 1248 1 ) ( -64 1249 0 ) test_level/test_texture -32 0 0 1 1
-}
-// brush 35
-{
-( -512 896 32 ) ( -512 897 32 ) ( -512 896 33 ) test_level/test_texture 32 0 0 1 1
-( -448 864 0 ) ( -449 864 0 ) ( -448 864 1 ) test_level/test_texture 0 0 180 1 -1
-( -448 832 0 ) ( -448 833 0 ) ( -449 832 0 ) test_level/test_texture 32 0 90 1 1
-( -512 896 320 ) ( -513 896 320 ) ( -512 897 320 ) test_level/test_texture 32 0 90 1 1
-( -512 928 32 ) ( -512 928 33 ) ( -513 928 32 ) test_level/test_texture 0 0 180 1 -1
-( -448 832 0 ) ( -448 832 1 ) ( -448 833 0 ) test_level/test_texture 32 0 0 1 1
-}
-// brush 36
-{
-( -512 1312 32 ) ( -512 1313 32 ) ( -512 1312 33 ) test_level/test_texture 32 0 0 1 1
-( -448 1248 0 ) ( -449 1248 0 ) ( -448 1248 1 ) test_level/test_texture 0 0 180 1 -1
-( -448 1248 0 ) ( -448 1249 0 ) ( -449 1248 0 ) test_level/test_texture 32 0 90 1 1
-( -512 1312 320 ) ( -513 1312 320 ) ( -512 1313 320 ) test_level/test_texture 32 0 90 1 1
-( -512 1312 32 ) ( -512 1312 33 ) ( -513 1312 32 ) test_level/test_texture 0 0 180 1 -1
-( -448 1248 0 ) ( -448 1248 1 ) ( -448 1249 0 ) test_level/test_texture 32 0 0 1 1
 }
 }
