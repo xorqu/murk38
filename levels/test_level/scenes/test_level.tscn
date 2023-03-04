@@ -12,7 +12,7 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 [sub_resource type="Environment" id="Environment_cvdkh"]
 fog_enabled = true
 
-[node name="Test_level" type="Node3D"]
+[node name="Test_level" type="Node3D" groups=["level"]]
 script = ExtResource("1_tc2ek")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
