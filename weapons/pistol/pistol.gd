@@ -6,6 +6,6 @@ func fire(raycast):
 	if raycast.is_colliding():
 		if raycast.get_collider().is_in_group("enemy") and !raycast.get_collider().is_in_group("player"):
 			var target = raycast.get_collider()
-			target.get_damage(damage)
+			target.take_damage(damage)
 
 

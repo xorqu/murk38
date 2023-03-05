@@ -8,5 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_text("fps:" + str(Engine.get_frames_per_second()))
-	
+	set_text("hp:" + str(get_parent().get_parent().get_node("Player").hp))

@@ -7,7 +7,7 @@ class_name Player extends CharacterBody3D
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 2.3 # m
 @export_range(0.1, 9.25, 0.05, "or_greater") var camera_sens: float = 80
 
-
+@export var hp = 100
 
 
 var jumping: bool = false
@@ -86,4 +86,13 @@ func walk_sound_play():
 			
 	if !is_on_floor() or (!walk_sound.get_stream_paused() and (Input.is_action_just_released('w') or Input.is_action_just_released('a') or Input.is_action_just_released('s') or Input.is_action_just_released('d'))):
 		walk_sound.set_stream_paused(true)
+
+func take_damage(dmg):
+	hp -= dmg
+	if hp <= 0:
+		death()
+		
+
+func death():
+	print("death")
 
