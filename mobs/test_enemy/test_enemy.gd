@@ -1,8 +1,5 @@
-extends CharacterBody3D
+extends default_enemy
 
-var SPEED = 3.0
-var hp = 100
-@onready var nav_agent = $NavigationAgent3D
 
 
 func _physics_process(delta):
@@ -16,11 +13,4 @@ func _physics_process(delta):
 func update_target_location(target_location):
 	nav_agent.set_target_position(target_location)
 
-func get_damage(damage):
-	hp -= damage
-	if hp <= 0:
-		death()
-		
-				
-func death():
-	queue_free()
+
