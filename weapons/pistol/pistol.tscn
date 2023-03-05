@@ -11,4 +11,5 @@ size = Vector3(0.1, 0.2, 1)
 
 [node name="Shot_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_cjv0u")
-volume_db = -33.69
+volume_db = -24.235
+max_polyphony = 5

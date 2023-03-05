@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dffgt2qm2t6q8"]
+[gd_scene load_steps=6 format=3 uid="uid://dffgt2qm2t6q8"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_hj8qt"]
 [ext_resource type="PackedScene" uid="uid://cb7f5angh2m7n" path="res://weapons/pistol/pistol.tscn" id="2_y3ofx"]
 [ext_resource type="Script" path="res://player/debug_text.gd" id="3_pm500"]
+[ext_resource type="AudioStream" uid="uid://df701dm36tp5u" path="res://player/walk.mp3" id="4_ovgyd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdjtu"]
 radius = 0.6
@@ -57,3 +58,9 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "fps"
 script = ExtResource("3_pm500")
+
+[node name="Walk_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ovgyd")
+volume_db = -4.952
+autoplay = true
+stream_paused = true

@@ -24,11 +24,12 @@ var jump_vel: Vector3 # Jumping velocity
 
 @onready var camera: Camera3D = $Camera3D
 @onready var raycast = $Camera3D/RayCast3D
-
+@onready var walk_sound = $Walk_sound
 
 
 func _ready() -> void:
 	capture_mouse()
+	walk_sound.set_stream_paused(true)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
@@ -41,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	if mouse_captured: _rotate_camera(delta)
 	velocity = _walk(delta) + _gravity(delta) + _jump(delta)
 	move_and_slide()
-	
+	walk_sound_play()
 
 func capture_mouse() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -77,5 +78,11 @@ func _jump(delta: float) -> Vector3:
 	jump_vel = Vector3.ZERO if is_on_floor() else jump_vel.move_toward(Vector3.ZERO, gravity * delta)
 	return jump_vel
 
-
+func walk_sound_play():
+	if 	walk_sound.get_stream_paused():
+		if (Input.is_action_pressed('w') or Input.is_action_pressed('a') or Input.is_action_pressed('s') or Input.is_action_pressed('d')) and is_on_floor():
+			walk_sound.set_stream_paused(false)
+			
+	if !is_on_floor() or (!walk_sound.get_stream_paused() and (Input.is_action_just_released('w') or Input.is_action_just_released('a') or Input.is_action_just_released('s') or Input.is_action_just_released('d'))):
+		walk_sound.set_stream_paused(true)
 
