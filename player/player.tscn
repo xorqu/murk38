@@ -27,7 +27,6 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.4, -0.7)
 
 [node name="Pistol" parent="Camera3D/Weapon_marker" instance=ExtResource("2_y3ofx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
 
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")

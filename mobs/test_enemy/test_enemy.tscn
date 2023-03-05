@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q8u2j"]
 height = 3.0
 
-[node name="test_enemy" instance=ExtResource("1_usume")]
+[node name="Test_enemy" instance=ExtResource("1_usume")]
 script = ExtResource("1_3vgvw")
 
 [node name="CollisionShape3D" parent="." index="0"]

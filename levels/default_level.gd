@@ -12,7 +12,6 @@ func _process(delta):
 
 func texture_filtering_fix():
 	var mesh_instances = $NavigationRegion3D.get_child(0).get_children()
-	print(mesh_instances)
 	for mesh_instance in mesh_instances:
 		for index in mesh_instance.mesh.get_surface_count():
 			var material = mesh_instance.mesh.surface_get_material(index)
