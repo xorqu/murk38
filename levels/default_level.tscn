@@ -16,3 +16,5 @@ script = ExtResource("1_7srof")
 [node name="UI" parent="." instance=ExtResource("2_u3gy8")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Enemy_spawner" type="Node" parent="."]
