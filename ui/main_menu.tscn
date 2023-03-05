@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://btpbsrkhtau3m"]
+[gd_scene load_steps=2 format=3 uid="uid://cr0n2tdmsrytg"]
 
-[ext_resource type="Script" path="res://ui/scripts/main_menu.gd" id="1_ujsgc"]
+[ext_resource type="Script" path="res://ui/main_menu.gd" id="1_2nlkt"]
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ujsgc")
+script = ExtResource("1_2nlkt")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(200, 120)

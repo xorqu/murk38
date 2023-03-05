@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dffgt2qm2t6q8"]
+[gd_scene load_steps=5 format=3 uid="uid://dffgt2qm2t6q8"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_hj8qt"]
 [ext_resource type="PackedScene" uid="uid://cb7f5angh2m7n" path="res://weapons/pistol/pistol.tscn" id="2_y3ofx"]
-[ext_resource type="Script" path="res://player/debug_text.gd" id="3_pm500"]
 [ext_resource type="AudioStream" uid="uid://df701dm36tp5u" path="res://player/walk.mp3" id="4_ovgyd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdjtu"]
@@ -29,35 +28,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.4, -0.7)
 
 [node name="Pistol" parent="Camera3D/Weapon_marker" instance=ExtResource("2_y3ofx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3)
-
-[node name="UI" type="Control" parent="."]
-custom_minimum_size = Vector2(350, 200)
-layout_mode = 3
-anchors_preset = 0
-offset_right = 350.0
-offset_bottom = 200.0
-
-[node name="Crosshair" type="ColorRect" parent="UI"]
-custom_minimum_size = Vector2(2, 2)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 1.0
-offset_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Debug_text" type="Label" parent="UI"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "fps"
-script = ExtResource("3_pm500")
 
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")

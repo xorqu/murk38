@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://b27jrbmuppif6"]
+
+[ext_resource type="Script" path="res://player/debug_text.gd" id="1_njo5u"]
+
+[node name="UI" type="Control"]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 350.0
+offset_bottom = 200.0
+
+[node name="Crosshair" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Debug_text" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "fps"
+script = ExtResource("1_njo5u")
+
+[node name="Pause_menu" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -60.0
+offset_right = 100.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Resume_button" type="Button" parent="Pause_menu"]
+layout_mode = 2
+text = "resume"
+
+[node name="Exit_button" type="Button" parent="Pause_menu"]
+layout_mode = 2
+text = "exit"

@@ -34,7 +34,8 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
 	if Input.is_action_just_pressed("space"): jumping = true
-	if Input.is_action_just_pressed("ui_cancel"): get_tree().quit()
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
 	if Input.is_action_just_pressed("click"):
 		$Camera3D/Weapon_marker.get_child(0).fire(raycast)
 
