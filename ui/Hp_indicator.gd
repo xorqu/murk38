@@ -8,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	set_text("hp:" + str(get_parent().get_parent().get_node("Player").hp))
+	set_text("hp:" + str(get_tree().get_first_node_in_group("player").hp))
