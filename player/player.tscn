@@ -61,6 +61,5 @@ script = ExtResource("3_pm500")
 
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")
-volume_db = -4.952
+volume_db = -2.533
 autoplay = true
-stream_paused = true
