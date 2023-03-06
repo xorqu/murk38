@@ -29,4 +29,19 @@ volume_db = -2.81
 autoplay = true
 
 [node name="test_enemy" parent="." index="6" instance=ExtResource("4_ib0m2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.29165, 0, -27.9676)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4276, 0, -29.0766)
+
+[node name="test_enemy2" parent="." index="7" instance=ExtResource("4_ib0m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7255, 0, -39.5422)
+
+[node name="test_enemy3" parent="." index="8" instance=ExtResource("4_ib0m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.0603, 0, -38.4293)
+
+[node name="test_enemy4" parent="." index="9" instance=ExtResource("4_ib0m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0757, 0, -48.7246)
+
+[node name="test_enemy5" parent="." index="10" instance=ExtResource("4_ib0m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.9984, 9.53674e-07, -63.0528)
+
+[node name="test_enemy6" parent="." index="11" instance=ExtResource("4_ib0m2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5553, 7.15256e-07, -75.2281)

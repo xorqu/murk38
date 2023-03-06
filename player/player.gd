@@ -93,4 +93,4 @@ func take_damage(dmg):
 
 func death():
 	print("death")
-
+	get_tree().reload_current_scene()
