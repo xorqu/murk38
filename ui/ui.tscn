@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdptl4e3y7wnc"]
+[gd_scene load_steps=5 format=3 uid="uid://bdptl4e3y7wnc"]
 
 [ext_resource type="Script" path="res://ui/hp_indicator.gd" id="1_1l1ll"]
+[ext_resource type="Script" path="res://ui/ammo_indicator.gd" id="1_7cqdj"]
 [ext_resource type="Script" path="res://player/debug_text.gd" id="1_njo5u"]
 [ext_resource type="Script" path="res://ui/pause_menu.gd" id="3_x2qy7"]
 
@@ -26,6 +27,20 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Ammo_indicator" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "ammo"
+script = ExtResource("1_7cqdj")
+
 [node name="Hp_indicator" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 2
@@ -34,6 +49,7 @@ anchor_bottom = 1.0
 offset_top = -23.0
 offset_right = 40.0
 grow_vertical = 0
+text = "hp"
 script = ExtResource("1_1l1ll")
 
 [node name="Debug_text" type="Label" parent="."]

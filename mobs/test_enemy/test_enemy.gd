@@ -1,7 +1,11 @@
 extends default_enemy
 
+
+
+
 var attack_cooldown = 1
 var target
+
 
 func _physics_process(delta):
 	var current_location = global_transform.origin
