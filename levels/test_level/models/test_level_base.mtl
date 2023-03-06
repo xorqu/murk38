@@ -1,6 +1,3 @@
 newmtl test_level/bricks2
 map_Kd ..\..\..\textures\test_level\bricks2.png
 
-newmtl test_level/test_texture
-map_Kd ..\..\..\textures\test_level\test_texture.png
-

@@ -9,7 +9,7 @@ class_name Player extends CharacterBody3D
 
 @export var hp = 100
 
-var inventory = [[null,null],[-1,0,0,0,0]]
+var inventory = [[null,null],["inf",0,0,0,0]]
 var current_weapon_id = 0
 
 var jumping: bool = false
@@ -120,6 +120,7 @@ func collect_weapon(item):
 	#parsing item type
 	if item is pistol_item:
 		inventory[0][0] = Global.pistol_packed
+		setup_weapon(0)
 	elif item is shotgun_item:
 		inventory[0][1] = Global.shotgun_packed
 

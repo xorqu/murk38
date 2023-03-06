@@ -18,3 +18,5 @@ script = ExtResource("1_7srof")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="Enemy_spawner" type="Node" parent="."]
+
+[node name="Ligtht" type="Node" parent="."]
