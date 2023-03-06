@@ -12,4 +12,5 @@ func _physics_process(delta):
 	
 
 func update_enemies_target():
+	#transfer player position to enemies
 	get_tree().call_group("enemy", "update_target_location", player.global_transform.origin)

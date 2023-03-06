@@ -36,11 +36,13 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
 	if Input.is_action_just_pressed("space"): jumping = true
+	
+	#shooting
 	if Input.is_action_just_pressed("click"):
 		if weapon_marker.get_child(0) != null:
 			weapon_marker.get_child(0).fire(raycast)
 	
-	#chose_weapon
+	#weapon_selection
 	if Input.is_action_just_pressed("1"):
 		setup_weapon(0)
 	if Input.is_action_just_pressed("2"):
@@ -97,8 +99,7 @@ func _jump(delta: float) -> Vector3:
 func walk_sound_play():
 	if 	walk_sound.get_stream_paused():
 		if (Input.is_action_pressed('w') or Input.is_action_pressed('a') or Input.is_action_pressed('s') or Input.is_action_pressed('d')) and is_on_floor():
-			walk_sound.set_stream_paused(false)
-			
+			walk_sound.set_stream_paused(false)		
 	if !is_on_floor() or (!walk_sound.get_stream_paused() and (Input.is_action_just_released('w') or Input.is_action_just_released('a') or Input.is_action_just_released('s') or Input.is_action_just_released('d'))):
 		walk_sound.set_stream_paused(true)
 
@@ -116,9 +117,9 @@ func death():
 
 func collect_weapon(item):
 	print("collect weapon: " + str(item))
+	#parsing item type
 	if item is pistol_item:
 		inventory[0][0] = Global.pistol_packed
-		setup_weapon(0)
 	elif item is shotgun_item:
 		inventory[0][1] = Global.shotgun_packed
 
@@ -126,8 +127,10 @@ func collect_ammo(item):
 	print("collect ammo: ")
 
 func setup_weapon(id):
+	#clean existant weapon
 	if weapon_marker.get_child_count() > 0:
 		weapon_marker.get_child(0).queue_free()
+	#setup only if weapon is in inventory (olready collected)
 	if inventory[0][id] != null:
 		var weapon = inventory[0][id].instantiate()
 		weapon_marker.add_child(weapon)
