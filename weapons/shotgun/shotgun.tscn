@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5d53kf5uw331"]
+
+[ext_resource type="PackedScene" uid="uid://bx81ik7kda8ol" path="res://weapons/default_weapon.tscn" id="1_lrg1b"]
+[ext_resource type="Script" path="res://weapons/shotgun/shotgun.gd" id="2_00l0v"]
+
+[node name="Shotgun" instance=ExtResource("1_lrg1b")]
+script = ExtResource("2_00l0v")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+size = Vector3(0.224449, 0.110802, 1)

@@ -9,7 +9,8 @@ class_name Player extends CharacterBody3D
 
 @export var hp = 100
 
-var inventory = [[],[-1,0,0,0,0]]
+var inventory = [[null,null],[-1,0,0,0,0]]
+var current_weapon_id = 0
 
 var jumping: bool = false
 var mouse_captured: bool = false
@@ -26,7 +27,7 @@ var jump_vel: Vector3 # Jumping velocity
 @onready var camera: Camera3D = $Camera3D
 @onready var raycast = $Camera3D/RayCast3D
 @onready var walk_sound = $Walk_sound
-
+@onready var weapon_marker = $Camera3D/Weapon_marker
 
 func _ready() -> void:
 	capture_mouse()
@@ -36,7 +37,22 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
 	if Input.is_action_just_pressed("space"): jumping = true
 	if Input.is_action_just_pressed("click"):
-		$Camera3D/Weapon_marker.get_child(0).fire(raycast)
+		if weapon_marker.get_child(0) != null:
+			weapon_marker.get_child(0).fire(raycast)
+	
+	#chose_weapon
+	if Input.is_action_just_pressed("1"):
+		setup_weapon(0)
+	if Input.is_action_just_pressed("2"):
+		setup_weapon(1)
+	if Input.is_action_just_pressed("scroll_up"):
+		if (current_weapon_id + 1) != inventory[0].size():
+			current_weapon_id += 1
+			setup_weapon(current_weapon_id)
+	if Input.is_action_just_pressed("scroll_down"):
+		if current_weapon_id != 0:
+			current_weapon_id -= 1
+			setup_weapon(current_weapon_id)
 
 func _physics_process(delta: float) -> void:
 	if mouse_captured: _rotate_camera(delta)
@@ -98,6 +114,23 @@ func death():
 	print("death")
 	get_tree().reload_current_scene()
 
-func collect_item(item):
-	print("collect" + str(item))
+func collect_weapon(item):
+	print("collect weapon: " + str(item))
+	if item is pistol_item:
+		inventory[0][0] = Global.pistol_packed
+		setup_weapon(0)
+	elif item is shotgun_item:
+		inventory[0][1] = Global.shotgun_packed
 
+func collect_ammo(item):
+	print("collect ammo: ")
+
+func setup_weapon(id):
+	if weapon_marker.get_child_count() > 0:
+		weapon_marker.get_child(0).queue_free()
+	if inventory[0][id] != null:
+		var weapon = inventory[0][id].instantiate()
+		weapon_marker.add_child(weapon)
+		current_weapon_id = id
+	else:
+		pass

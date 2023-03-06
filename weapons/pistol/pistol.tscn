@@ -12,4 +12,4 @@ stream = ExtResource("2_cjv0u")
 volume_db = -22.533
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
-size = Vector3(0.160319, 0.200659, 1.21321)
+size = Vector3(0.160319, 0.200659, 0.369685)

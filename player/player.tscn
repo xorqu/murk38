@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dffgt2qm2t6q8"]
+[gd_scene load_steps=4 format=3 uid="uid://dffgt2qm2t6q8"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_hj8qt"]
-[ext_resource type="PackedScene" uid="uid://cb7f5angh2m7n" path="res://weapons/pistol/pistol.tscn" id="2_y3ofx"]
 [ext_resource type="AudioStream" uid="uid://df701dm36tp5u" path="res://player/walk.mp3" id="4_ovgyd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pdjtu"]
@@ -25,8 +24,6 @@ collision_mask = 2
 
 [node name="Weapon_marker" type="Marker3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.4, -0.7)
-
-[node name="Pistol" parent="Camera3D/Weapon_marker" instance=ExtResource("2_y3ofx")]
 
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")

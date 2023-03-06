@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqlsd8p1ye841"]
+
+[ext_resource type="PackedScene" uid="uid://d2k2q003j6pql" path="res://items/weapon_items/weapon_item.tscn" id="1_jtjqs"]
+[ext_resource type="Script" path="res://items/weapon_items/shotgun_item.gd" id="2_5doxm"]
+
+[node name="Shotgun_item" instance=ExtResource("1_jtjqs")]
+script = ExtResource("2_5doxm")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+size = Vector3(0.282705, 0.1304, 1)
