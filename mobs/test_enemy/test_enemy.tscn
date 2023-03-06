@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6koqkg01fcqt"]
+[gd_scene load_steps=6 format=3 uid="uid://b6koqkg01fcqt"]
 
 [ext_resource type="Script" path="res://mobs/test_enemy/test_enemy.gd" id="1_3vgvw"]
 [ext_resource type="PackedScene" uid="uid://ce4fv4jg8540u" path="res://mobs/default_enemy.tscn" id="1_usume"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q8u2j"]
 height = 3.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3i278"]
+albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ayb1x"]
 radius = 1.2
@@ -20,6 +23,7 @@ shape = SubResource("CapsuleShape3D_q8u2j")
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 size = Vector3(1, 3, 1)
+material = SubResource("StandardMaterial3D_3i278")
 
 [node name="Attack_radius" type="Area3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
