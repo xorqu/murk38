@@ -90,7 +90,12 @@ func take_damage(dmg):
 	if hp <= 0:
 		death()
 		
+func heal(heal_hp):
+	hp += heal_hp
 
 func death():
 	print("death")
 	get_tree().reload_current_scene()
+
+func collect_item(item):
+	print(item)
