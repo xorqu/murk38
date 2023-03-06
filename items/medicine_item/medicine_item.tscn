@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2qqyee6kw6po"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" uid="uid://lmvqsheharqh" path="res://items/default_item.tscn" id="1_803fe"]
-[ext_resource type="Script" path="res://items/medicine_item.gd" id="2_77rmd"]
+[ext_resource type="Script" path="res://items/medicine_item/medicine_item.gd" id="2_77rmd"]
 
 [node name="Medicine_item" instance=ExtResource("1_803fe")]
 script = ExtResource("2_77rmd")
