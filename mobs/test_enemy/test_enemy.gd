@@ -19,18 +19,20 @@ func update_target_location(target_location):
 	nav_agent.set_target_position(target_location)
 
 
+
+
 func attack():
 	target.take_damage(damage)
 	$Attack_radius/Attack_cooldown_timer.start(attack_cooldown)
-
+	
 func _on_attack_radius_body_entered(body):
 	if body.is_in_group("player"):
 		target = body
 		attack()
-
+		
 func _on_attack_cooldown_timer_timeout():
 	attack()
-
+	
 func _on_attack_radius_body_exited(body):
 	if body.is_in_group("player"):
 		$Attack_radius/Attack_cooldown_timer.stop()

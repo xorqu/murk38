@@ -9,6 +9,7 @@ class_name Player extends CharacterBody3D
 
 @export var hp = 100
 
+var inventory = [[],[-1,0,0,0,0]]
 
 var jumping: bool = false
 var mouse_captured: bool = false
@@ -98,4 +99,5 @@ func death():
 	get_tree().reload_current_scene()
 
 func collect_item(item):
-	print(item)
+	print("collect" + str(item))
+
