@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgw0gbc1wua10"]
+
+[ext_resource type="PackedScene" uid="uid://d2k2q003j6pql" path="res://items/weapon_items/weapon_item.tscn" id="1_ycwxk"]
+[ext_resource type="Script" path="res://items/weapon_items/plasmagun_item.gd" id="2_tss6s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0lhob"]
+albedo_color = Color(0.443137, 0.396078, 0.843137, 1)
+
+[node name="Plasmagun_item" instance=ExtResource("1_ycwxk")]
+script = ExtResource("2_tss6s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_0lhob")
+size = Vector3(1, 0.557695, 1)

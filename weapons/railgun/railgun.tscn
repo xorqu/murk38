@@ -1,5 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://rwhy6pfd4mc4"]
+[gd_scene load_steps=4 format=3 uid="uid://rwhy6pfd4mc4"]
 
 [ext_resource type="PackedScene" uid="uid://bx81ik7kda8ol" path="res://weapons/default_weapon.tscn" id="1_nid5x"]
+[ext_resource type="Script" path="res://weapons/railgun/railgun.gd" id="2_57v8l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhg71"]
+albedo_color = Color(0.941176, 0.14902, 0.117647, 1)
 
 [node name="Railgun" instance=ExtResource("1_nid5x")]
+script = ExtResource("2_57v8l")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_xhg71")
+size = Vector3(0.850401, 0.246804, 0.635412)
