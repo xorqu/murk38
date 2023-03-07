@@ -10,9 +10,9 @@ func _ready():
 func _process(delta):
 	pass
 
-func update(current_weapon_id):
-	set_text(str(get_tree().get_first_node_in_group("player").inventory[1][current_weapon_id]))
+func update(weapon_pointer):
+	set_text(str(get_tree().get_first_node_in_group("player").get_inventory().inventory[1][weapon_pointer]))
 
 
 func _input(event: InputEvent) -> void:
-	update(get_tree().get_first_node_in_group("player").current_weapon_id)
+	update(get_tree().get_first_node_in_group("player").get_inventory().weapon_pointer)

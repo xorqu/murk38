@@ -1,4 +1,5 @@
-class_name Player extends CharacterBody3D
+extends CharacterBody3D
+class_name player 
 
 @export_category("Player")
 @export_range(1, 35, 1) var speed: float = 10 # m/s
@@ -8,9 +9,6 @@ class_name Player extends CharacterBody3D
 @export_range(0.1, 9.25, 0.05, "or_greater") var camera_sens: float = 80
 
 @export var hp = 100
-
-var inventory = [[null,null],["inf",0,0,0,0]]
-var current_weapon_id = 0
 
 var jumping: bool = false
 var mouse_captured: bool = false
@@ -42,19 +40,6 @@ func _input(event: InputEvent) -> void:
 		if weapon_marker.get_child(0) != null:
 			weapon_marker.get_child(0).fire(raycast)
 	
-	#weapon_selection
-	if Input.is_action_just_pressed("1"):
-		setup_weapon(0)
-	if Input.is_action_just_pressed("2"):
-		setup_weapon(1)
-	if Input.is_action_just_pressed("scroll_up"):
-		if (current_weapon_id + 1) != inventory[0].size():
-			current_weapon_id += 1
-			setup_weapon(current_weapon_id)
-	if Input.is_action_just_pressed("scroll_down"):
-		if current_weapon_id != 0:
-			current_weapon_id -= 1
-			setup_weapon(current_weapon_id)
 
 func _physics_process(delta: float) -> void:
 	if mouse_captured: _rotate_camera(delta)
@@ -115,26 +100,6 @@ func death():
 	print("death")
 	get_tree().reload_current_scene()
 
-func collect_weapon(item):
-	print("collect weapon: " + str(item))
-	#parsing item type
-	if item is pistol_item:
-		inventory[0][0] = Global.pistol_packed
-		setup_weapon(0)
-	elif item is shotgun_item:
-		inventory[0][1] = Global.shotgun_packed
 
-func collect_ammo(item):
-	print("collect ammo: ")
-
-func setup_weapon(id):
-	#clean existant weapon
-	if weapon_marker.get_child_count() > 0:
-		weapon_marker.get_child(0).queue_free()
-	#setup only if weapon is in inventory (olready collected)
-	if inventory[0][id] != null:
-		var weapon = inventory[0][id].instantiate()
-		weapon_marker.add_child(weapon)
-		current_weapon_id = id
-	else:
-		pass
+func get_inventory():
+	return $Inventory
