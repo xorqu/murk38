@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://rwhy6pfd4mc4"]
+
+[ext_resource type="PackedScene" uid="uid://bx81ik7kda8ol" path="res://weapons/default_weapon.tscn" id="1_nid5x"]
+
+[node name="Railgun" instance=ExtResource("1_nid5x")]

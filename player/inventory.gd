@@ -16,16 +16,16 @@ func _process(delta):
 
 func _input(event: InputEvent) -> void:
 	#weapon_selection
-	if Input.is_action_just_pressed("1"):
-		setup_weapon(0)
-	if Input.is_action_just_pressed("2"):
-		setup_weapon(1)
-	if Input.is_action_just_pressed("scroll_up"):
+	#if Input.is_action_just_pressed("1"):
+	#	setup_weapon(0)
+	#if Input.is_action_just_pressed("2"):
+	#	setup_weapon(1)
+	if Input.is_action_just_pressed("scroll_up") or Input.is_action_just_pressed("e"):
 		if (weapon_pointer + 1) != inventory[0].size():
 			if inventory[0][weapon_pointer+1] != null:
 				weapon_pointer += 1
 				setup_weapon(weapon_pointer)
-	if Input.is_action_just_pressed("scroll_down"):
+	if Input.is_action_just_pressed("scroll_down") or Input.is_action_just_pressed("q"):
 		if weapon_pointer != 0:
 			if inventory[0][weapon_pointer-1] != null:
 				weapon_pointer -= 1

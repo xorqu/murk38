@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkmla5cphovni"]
+
+[ext_resource type="PackedScene" uid="uid://bx81ik7kda8ol" path="res://weapons/default_weapon.tscn" id="1_8k0f5"]
+[ext_resource type="Script" path="res://weapons/plasmagun/plasmagun.gd" id="2_jvo53"]
+
+[node name="Plasmagun" instance=ExtResource("1_8k0f5")]
+script = ExtResource("2_jvo53")
