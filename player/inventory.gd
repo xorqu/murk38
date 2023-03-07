@@ -17,6 +17,20 @@ func _process(delta):
 func _input(event: InputEvent) -> void:
 	
 	#weapon_selection
+	
+	if Input.is_action_just_pressed("1") and typeof(inventory[0][0]) != TYPE_INT:
+		weapon_pointer = 0
+		setup_weapon(weapon_pointer)
+	if Input.is_action_just_pressed("2") and typeof(inventory[0][1]) != TYPE_INT:
+		weapon_pointer = 1
+		setup_weapon(weapon_pointer)
+	if Input.is_action_just_pressed("3") and typeof(inventory[0][2]) != TYPE_INT:
+		weapon_pointer = 2
+		setup_weapon(weapon_pointer)
+	if Input.is_action_just_pressed("4") and typeof(inventory[0][3]) != TYPE_INT:
+		weapon_pointer = 3
+		setup_weapon(weapon_pointer)
+
 	if Input.is_action_just_pressed("scroll_up") or Input.is_action_just_pressed("e"):
 		if weapon_pointer+1 < inventory[0].size() and typeof(inventory[0][weapon_pointer+1]) != TYPE_INT:
 			weapon_pointer += 1
@@ -62,7 +76,8 @@ func collect_ammo(item):
 func setup_weapon(id):
 	#clean existant weapon
 	if weapon_marker.get_child_count() > 0:
-		weapon_marker.get_child(0).queue_free()
+		for child in weapon_marker.get_children():
+			child.queue_free()
 	#setup only if weapon is in inventory (olready collected)
 	if typeof(inventory[0][id]) != TYPE_INT:
 		var weapon = inventory[0][id].instantiate()
