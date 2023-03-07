@@ -22,12 +22,14 @@ func _input(event: InputEvent) -> void:
 		setup_weapon(1)
 	if Input.is_action_just_pressed("scroll_up"):
 		if (weapon_pointer + 1) != inventory[0].size():
-			weapon_pointer += 1
-			setup_weapon(weapon_pointer)
+			if inventory[0][weapon_pointer+1] != null:
+				weapon_pointer += 1
+				setup_weapon(weapon_pointer)
 	if Input.is_action_just_pressed("scroll_down"):
 		if weapon_pointer != 0:
-			weapon_pointer -= 1
-			setup_weapon(weapon_pointer)	
+			if inventory[0][weapon_pointer-1] != null:
+				weapon_pointer -= 1
+				setup_weapon(weapon_pointer)	
 
 func collect_weapon(item):
 	print("collect weapon: " + str(item))
