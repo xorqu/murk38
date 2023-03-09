@@ -1,13 +1,13 @@
 extends default_weapon
 
-var dispersion = 30
-var ammo_slot_id = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
 	damage = 5
-
+	ammo_slot_id = 1
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
