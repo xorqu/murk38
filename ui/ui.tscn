@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdptl4e3y7wnc"]
+[gd_scene load_steps=5 format=3 uid="uid://7rqtefhkcd1b"]
 
 [ext_resource type="Script" path="res://ui/hp_indicator.gd" id="1_1l1ll"]
 [ext_resource type="Script" path="res://ui/ammo_indicator.gd" id="1_7cqdj"]
-[ext_resource type="Script" path="res://player/debug_text.gd" id="1_njo5u"]
+[ext_resource type="Script" path="res://ui/debug_text.gd" id="3_sjgji"]
 [ext_resource type="Script" path="res://ui/pause_menu.gd" id="3_x2qy7"]
 
 [node name="UI" type="Control"]
@@ -59,7 +59,7 @@ layout_mode = 1
 offset_right = 40.0
 offset_bottom = 26.0
 text = "fps"
-script = ExtResource("1_njo5u")
+script = ExtResource("3_sjgji")
 
 [node name="Pause_menu" type="VBoxContainer" parent="."]
 process_mode = 3
