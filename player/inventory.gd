@@ -1,6 +1,6 @@
 extends Node
 
-var inventory = [[0,0,0,0],["inf",1,2,3]]
+var inventory = [[0,0,0,0],["inf",0,0,0]]
 var weapon_pointer = 0
 
 @onready var weapon_marker = $"../Camera3D/Weapon_marker"
@@ -69,7 +69,15 @@ func collect_weapon(item):
 		setup_weapon(3)
 	
 func collect_ammo(item):
-	print("collect ammo: ")
+	print("collect ammo: " + str(item))
+	#parsing ammo type
+	if item is shot_ammo_item:
+		inventory[1][1] += 10
+	elif item is plasma_ammo_item:
+		inventory[1][2] += 100
+	elif item is bolt_ammo_item:
+		inventory[1][3] += 3
+
 
 func setup_weapon(id):
 	#clean existant weapon
