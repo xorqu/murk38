@@ -1,7 +1,7 @@
 extends default_weapon
 
 
-func fire(raycast):
+func fire(raycast, player):
 	$Shot_sound.play()
 	if raycast.is_colliding():
 		if raycast.get_collider().is_in_group("enemy") and !raycast.get_collider().is_in_group("player"):

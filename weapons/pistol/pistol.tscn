@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb7f5angh2m7n"]
+[gd_scene load_steps=4 format=3 uid="uid://dx4u1sj6a1eex"]
 
 [ext_resource type="PackedScene" uid="uid://bx81ik7kda8ol" path="res://weapons/default_weapon.tscn" id="1_d82qy"]
 [ext_resource type="Script" path="res://weapons/pistol/pistol.gd" id="1_pk1om"]
-[ext_resource type="AudioStream" uid="uid://c30sgshqip07b" path="res://weapons/pistol/shot.mp3" id="2_cjv0u"]
+[ext_resource type="AudioStream" uid="uid://c30sgshqip07b" path="res://weapons/pistol/pistol_shot.mp3" id="3_cdirt"]
 
 [node name="Pistol" instance=ExtResource("1_d82qy")]
 script = ExtResource("1_pk1om")
 
 [node name="Shot_sound" parent="." index="0"]
-stream = ExtResource("2_cjv0u")
+stream = ExtResource("3_cdirt")
 volume_db = -22.533
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]

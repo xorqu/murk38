@@ -106,3 +106,8 @@ func setup_weapon(slot):
 	else:
 		pass
 
+func get_ammo_count(ammo_slot_id):
+	return inventory[AMMO][ammo_slot_id]
+
+func use_ammo(ammo_slot_id, count):
+	inventory[AMMO][ammo_slot_id] -= count

@@ -38,7 +38,7 @@ func _input(event: InputEvent) -> void:
 	#shooting
 	if Input.is_action_just_pressed("click"):
 		if weapon_marker.get_child(0) != null:
-			weapon_marker.get_child(0).fire(raycast)
+			weapon_marker.get_child(0).fire(raycast, self)
 	
 
 func _physics_process(delta: float) -> void:

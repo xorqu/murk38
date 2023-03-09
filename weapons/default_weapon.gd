@@ -3,5 +3,5 @@ class_name default_weapon
 
 @onready var damage = 10
 
-func fire(raycast):
+func fire(raycast, player):
 	pass

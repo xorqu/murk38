@@ -26,6 +26,8 @@ collision_mask = 2
 [node name="Weapon_marker" type="Marker3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.4, -0.7)
 
+[node name="Node" type="Node" parent="Camera3D/Weapon_marker"]
+
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")
 volume_db = -2.533
