@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://dabkihrg7gbub"]
 
-[ext_resource type="PackedScene" uid="uid://d2k2q003j6pql" path="res://items/weapon_items/weapon_item.tscn" id="1_x5kyl"]
-[ext_resource type="Script" path="res://items/weapon_items/railgun_item.gd" id="2_wugd3"]
+[ext_resource type="PackedScene" uid="uid://d2k2q003j6pql" path="res://items/weapon_items/weapon_item.tscn" id="1_pnsqp"]
+[ext_resource type="Script" path="res://items/weapon_items/railgun_item/railgun_item.gd" id="2_q7l13"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqxlh"]
 albedo_color = Color(0.717647, 0.188235, 0.117647, 1)
 
-[node name="Railgun_item" instance=ExtResource("1_x5kyl")]
-script = ExtResource("2_wugd3")
+[node name="Railgun_item" instance=ExtResource("1_pnsqp")]
+script = ExtResource("2_q7l13")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)

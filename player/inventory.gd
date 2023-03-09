@@ -17,7 +17,6 @@ func _process(delta):
 func _input(event: InputEvent) -> void:
 	
 	#weapon_selection
-	
 	if Input.is_action_just_pressed("1") and typeof(inventory[0][0]) != TYPE_INT:
 		weapon_pointer = 0
 		setup_weapon(weapon_pointer)
@@ -68,7 +67,6 @@ func collect_weapon(item):
 	elif item is railgun_item:
 		inventory[0][3] = Global.railgun_packed
 		setup_weapon(3)
-	
 	
 func collect_ammo(item):
 	print("collect ammo: ")

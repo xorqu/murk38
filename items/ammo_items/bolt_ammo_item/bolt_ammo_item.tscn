@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bduce8300pa5s"]
+
+[ext_resource type="PackedScene" uid="uid://dfidha8mou8qk" path="res://items/ammo_items/ammo_item.tscn" id="1_r07ib"]
+[ext_resource type="Script" path="res://items/ammo_items/bolt_ammo_item/bolt_ammo_item.gd" id="2_b3j2b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24dtw"]
+albedo_color = Color(0.772549, 0.235294, 0.145098, 1)
+
+[node name="Bolt_ammo_item" instance=ExtResource("1_r07ib")]
+script = ExtResource("2_b3j2b")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_24dtw")

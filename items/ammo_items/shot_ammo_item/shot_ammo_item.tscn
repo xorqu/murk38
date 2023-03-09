@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cidy3q01oodx2"]
+
+[ext_resource type="PackedScene" uid="uid://dfidha8mou8qk" path="res://items/ammo_items/ammo_item.tscn" id="1_7df75"]
+[ext_resource type="Script" path="res://items/ammo_items/shot_ammo_item/shot_ammo_item.gd" id="2_7gck4"]
+
+[node name="Shot_ammo_item" instance=ExtResource("1_7df75")]
+script = ExtResource("2_7gck4")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(0.430303, 0, 0, 0, 0.430303, 0, 0, 0, 0.430303, 0, 1.5, 0)
