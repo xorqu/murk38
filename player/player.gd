@@ -30,6 +30,7 @@ var jump_vel: Vector3 # Jumping velocity
 func _ready() -> void:
 	capture_mouse()
 	walk_sound.set_stream_paused(true)
+	randomize_raycasts()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
@@ -103,3 +104,8 @@ func death():
 
 func get_inventory():
 	return $Inventory
+
+
+func randomize_raycasts():
+	for r in raycast.get_children():
+			r.set_rotation(Vector3(randf_range(-0.1,0.1),0,randf_range(-0.1,0.1)))

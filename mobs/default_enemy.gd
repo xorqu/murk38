@@ -2,7 +2,7 @@ extends CharacterBody3D
 class_name default_enemy
 
 @export var SPEED = 3.0
-@export var hp = 100
+@export var hp = 30
 @export var damage = 12
 
 
