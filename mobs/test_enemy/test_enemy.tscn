@@ -34,6 +34,11 @@ shape = SubResource("CapsuleShape3D_ayb1x")
 
 [node name="Attack_cooldown_timer" type="Timer" parent="Attack_radius" index="1"]
 
+[node name="hp_indicator" type="Label3D" parent="." index="4"]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0, 3.6, 0)
+billboard = 1
+text = "hp"
+
 [connection signal="body_entered" from="Attack_radius" to="." method="_on_attack_radius_body_entered"]
 [connection signal="body_exited" from="Attack_radius" to="." method="_on_attack_radius_body_exited"]
 [connection signal="timeout" from="Attack_radius/Attack_cooldown_timer" to="." method="_on_attack_cooldown_timer_timeout"]

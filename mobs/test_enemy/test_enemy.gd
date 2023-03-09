@@ -14,6 +14,7 @@ func _physics_process(delta):
 	
 	velocity = velocity.move_toward(new_velocity, 0.25)
 	move_and_slide()
+	$hp_indicator.set_text(str(hp))
 	
 func update_target_location(target_location):
 	nav_agent.set_target_position(target_location)
