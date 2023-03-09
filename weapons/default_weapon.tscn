@@ -6,3 +6,7 @@
 script = ExtResource("1_qqmta")
 
 [node name="Shot_sound" type="AudioStreamPlayer" parent="."]
+
+[node name="Reloading" type="Timer" parent="."]
+
+[connection signal="timeout" from="Reloading" to="." method="_on_reloading_timeout"]
