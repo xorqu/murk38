@@ -72,11 +72,11 @@ func collect_ammo(item):
 	print("collect ammo: " + str(item))
 	#parsing ammo type
 	if item is shot_ammo_item:
-		inventory[1][1] += 10
+		inventory[1][1] += item.get_count()
 	elif item is plasma_ammo_item:
-		inventory[1][2] += 100
+		inventory[1][2] += item.get_count()
 	elif item is bolt_ammo_item:
-		inventory[1][3] += 3
+		inventory[1][3] += item.get_count()
 
 
 func setup_weapon(id):
