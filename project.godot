@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="murk38_prototype1"
+config/name="murk38"
 run/main_scene="res://ui/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
