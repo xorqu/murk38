@@ -17,3 +17,5 @@ func _process(delta):
 	pass
 	
 
+func get_player():
+	return get_tree().get_first_node_in_group("player")
