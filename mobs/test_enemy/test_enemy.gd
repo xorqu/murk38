@@ -6,6 +6,8 @@ extends default_enemy
 var attack_cooldown = 1
 var target
 
+func _ready():
+	hp = 18
 
 func _physics_process(delta):
 	var current_location = global_transform.origin

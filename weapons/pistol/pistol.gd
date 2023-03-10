@@ -1,9 +1,9 @@
 extends default_weapon
 
 func _ready():
-	damage = 10
+	damage = 7
 	ammo_slot_id = 0
-	reload_time = 0.3
+	reload_time = 0.2
 
 func fire(raycast, player):
 	if is_reloaded:
