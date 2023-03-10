@@ -3,7 +3,7 @@ extends default_weapon
 func _ready():
 	damage = 10
 	ammo_slot_id = 0
-	reload_time = 0.4
+	reload_time = 0.3
 
 func fire(raycast, player):
 	if is_reloaded:
@@ -11,7 +11,7 @@ func fire(raycast, player):
 		$Reloading.start(reload_time)
 		is_reloaded = false
 		if raycast.is_colliding():
-			if raycast.get_collider().is_in_group("enemy"):
+			if raycast.get_collider() is default_enemy:
 				var target = raycast.get_collider()
 				target.take_damage(damage)
 		

@@ -22,7 +22,7 @@ func fire(raycast, player):
 			r.set_rotation(Vector3(randf_range(-0.1,0.1),0,randf_range(-0.1,0.1)))
 			print(str(r.get_rotation()))
 			if r.is_colliding():
-				if r.get_collider().is_in_group("enemy"):
+				if r.get_collider() is default_enemy:
 					var target = r.get_collider()
 					target.take_damage(damage)
 					print("hit " + str(target) + " dmg: " + str(damage))

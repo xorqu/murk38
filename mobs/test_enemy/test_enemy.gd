@@ -27,7 +27,7 @@ func attack():
 	$Attack_radius/Attack_cooldown_timer.start(attack_cooldown)
 	
 func _on_attack_radius_body_entered(body):
-	if body.is_in_group("player"):
+	if body is player:
 		target = body
 		attack()
 		
@@ -35,5 +35,5 @@ func _on_attack_cooldown_timer_timeout():
 	attack()
 	
 func _on_attack_radius_body_exited(body):
-	if body.is_in_group("player"):
+	if body is player:
 		$Attack_radius/Attack_cooldown_timer.stop()
