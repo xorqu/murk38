@@ -19,6 +19,7 @@ func _input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		get_tree().set_pause(false)
 		self.set_visible(false)
+		Global.get_player().get_node("Walk_sound").set_stream_paused(true)
 
 func _on_resume_button_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
