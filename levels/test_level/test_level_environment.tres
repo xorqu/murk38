@@ -2,10 +2,10 @@
 
 [resource]
 background_mode = 1
-background_color = Color(0.486275, 0.486275, 0.486275, 1)
-ambient_light_color = Color(0.486275, 0.486275, 0.486275, 1)
+background_color = Color(0.717647, 0.717647, 0.717647, 1)
+ambient_light_color = Color(0.0823529, 0.0823529, 0.0823529, 1)
 fog_enabled = true
-fog_light_color = Color(0, 0.580392, 0.341176, 1)
+fog_light_color = Color(0.356863, 0.356863, 0.356863, 1)
 adjustment_enabled = true
-adjustment_brightness = 1.73
+adjustment_brightness = 1.12
 adjustment_contrast = 1.17
