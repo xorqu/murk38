@@ -55,8 +55,6 @@ collision_mask = 2
 [node name="Weapon_marker" type="Marker3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226575, -0.4, -0.7)
 
-[node name="Node" type="Node" parent="Camera3D/Weapon_marker"]
-
 [node name="Walk_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ovgyd")
 volume_db = -2.533
@@ -64,3 +62,9 @@ autoplay = true
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("3_cstir")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66014, 0)
+light_energy = 6.98
+shadow_enabled = true
+omni_range = 7.85485

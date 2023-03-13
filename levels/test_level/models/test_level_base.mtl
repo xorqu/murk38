@@ -1,9 +1,60 @@
-newmtl test_level/floor_tile1
-map_Kd ..\..\..\textures\test_level\floor_tile1.png
+newmtl 64x64/bricks
+map_Kd ..\..\..\textures\64x64\bricks.png
 
-newmtl test_level/wall_tile2
-map_Kd ..\..\..\textures\test_level\wall_tile2.png
+newmtl 64x64/bricks2
+map_Kd ..\..\..\textures\64x64\bricks2.png
 
-newmtl test_level/wall_tile3
-map_Kd ..\..\..\textures\test_level\wall_tile3.png
+newmtl 64x64/bricks3
+map_Kd ..\..\..\textures\64x64\bricks3.png
+
+newmtl 64x64/concrete
+map_Kd ..\..\..\textures\64x64\concrete.png
+
+newmtl 64x64/concrete2
+map_Kd ..\..\..\textures\64x64\concrete2.png
+
+newmtl 64x64/gravel
+map_Kd ..\..\..\textures\64x64\gravel.png
+
+newmtl 64x64/organic
+map_Kd ..\..\..\textures\64x64\organic.png
+
+newmtl 64x64/rusty
+map_Kd ..\..\..\textures\64x64\rusty.png
+
+newmtl 64x64/rusty2
+map_Kd ..\..\..\textures\64x64\rusty2.png
+
+newmtl 64x64/rusty3
+map_Kd ..\..\..\textures\64x64\rusty3.png
+
+newmtl 64x64/rusty4
+map_Kd ..\..\..\textures\64x64\rusty4.png
+
+newmtl 64x64/sci-fi
+map_Kd ..\..\..\textures\64x64\sci-fi.png
+
+newmtl 64x64/sci-fi2
+map_Kd ..\..\..\textures\64x64\sci-fi2.png
+
+newmtl 64x64/sci-fi3
+map_Kd ..\..\..\textures\64x64\sci-fi3.png
+
+newmtl 64x64/tiles
+map_Kd ..\..\..\textures\64x64\tiles.png
+
+newmtl 64x64/tiles2
+map_Kd ..\..\..\textures\64x64\tiles2.png
+
+newmtl 64x64/tiles3
+map_Kd ..\..\..\textures\64x64\tiles3.png
+
+newmtl 64x64/tiles4
+map_Kd ..\..\..\textures\64x64\tiles4.png
+
+newmtl 64x64/tiles5
+map_Kd ..\..\..\textures\64x64\tiles5.png
+
+newmtl 64x64/wall
+map_Kd ..\..\..\textures\64x64\wall.png
 
